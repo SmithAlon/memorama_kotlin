@@ -14,7 +14,9 @@ import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.viewfinder.core.ScaleType
 import androidx.core.content.ContextCompat
+import com.example.games.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -90,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                     setMargins(8, 8, 8, 8)
                 }
                 setBackgroundResource(R.drawable.card_back)
-                scaleType = ImageButton.ScaleType.FIT_CENTER
+                setScaleType(android.widget.ImageView.ScaleType.CENTER_INSIDE)
                 setPadding(16, 16, 16, 16)
                 tag = i
                 setOnClickListener { onCardClick(this) }
